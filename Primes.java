@@ -1,7 +1,7 @@
 public class Primes {
     public static void main(String[] args) {
         int n = Integer.parseInt(args[0]);
-        boolean[] primes = new boolean[n];
+        boolean[] primes = new boolean[n + 1];
         if (primes.length <= 2){
             System.out.println("none");
         }
