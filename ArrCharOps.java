@@ -13,13 +13,10 @@ public class ArrCharOps {
         System.out.println(lastIndexOf(arr1, 'l'));
         System.out.println(concat(arr1, arr2));
         System.out.println(subArray(arr2, 2, 9));
-        System.out.println(compareTo("abcd", "abcd"));
+        System.out.println(compareTo("abc", "abc"));
+        System.out.println(compareTo("abc", "aBc"));
         System.out.println(compareTo("abc", "abcd"));
-        System.out.println(compareTo("abw", "abcd"));
-        System.out.println(compareTo("Abcd", "a"));
-        System.out.println(compareTo("apple", "banana"));
-        System.out.println(compareTo("apple", "applepie"));
-        System.out.println(compareTo("Zoo", "zoo"));
+        System.out.println(compareTo("abc", ""));
         System.out.println(hashCode(arr1));
         System.out.println(hashCode(arr2));
     }
@@ -156,6 +153,9 @@ public class ArrCharOps {
      *         return -2 if there is an error with the input.
      */
     public static int compareTo(String str1, String str2) {
+        if (str1.length() == 0 || str2.length() == 0 || str1 == null || str2 == null){
+            return -2;
+        }
         int length = str1.length() < str2.length() ? str1.length() : str2.length();
 
         for (int i = 0; i < length; i++){
